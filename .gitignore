@@ -1,0 +1,8 @@
+node_modules/
+public/
+lib/
+server-config.js
+dist/
+.DS_Store
+docs/_book
+.history/
