@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "akwp": "bin/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lusess123/ak-webpack.git"
