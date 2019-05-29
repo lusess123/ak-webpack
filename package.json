@@ -4,7 +4,7 @@
   "description": "封装通用的webpack配置",
   "main": "index.js",
   "scripts": {
-    "test": "npm run ak-webpack"
+    "test": "akwp"
   },
   "bin": {
     "ak-webpack": "bin/index.js",
