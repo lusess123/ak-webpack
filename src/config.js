@@ -49,7 +49,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       chunks: ['app'],
       filename: 'index.html',
-      template: './test/views/index.html',
+      template: './node_modules/ak-webpack/src/index.html',
       hash: true,
     }),
     new MiniCssExtractPlugin({
