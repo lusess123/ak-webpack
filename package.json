@@ -2,9 +2,11 @@
   "name": "ak-webpack",
   "version": "1.0.0",
   "description": "封装通用的webpack配置",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "akwp"
+    "test": "akwp",
+    "watch": "webpack-dev-server  --watch-poll --config ./src/config.js --mode development",
+    "re-watch": "rm -rf node_modules && rm -rf package-lock.json && npm i && npm run watch "
   },
   "bin": {
     "ak-webpack": "bin/index.js",
@@ -27,10 +29,21 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "ts-import-plugin": "^1.5.5",
     "ts-loader": "^6.0.1",
     "typescript": "^3.4.5",
+    "url-loader": "^1.1.2",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
