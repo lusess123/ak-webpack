@@ -6,6 +6,7 @@
   "scripts": {
     "test": "akwp",
     "watch": "webpack-dev-server  --watch-poll --config ./src/config.js --mode development",
+    "publish": "npm publish --registry https://registry.npmjs.org",
     "re-watch": "rm -rf node_modules && rm -rf package-lock.json && npm i && npm run watch "
   },
   "bin": {
