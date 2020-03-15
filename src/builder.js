@@ -189,20 +189,20 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
         ],
       },
 
-      // {
-      //   test: /\.(less)$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     'css-loader',
-      //     {
-      //       loader: 'less-loader',
-      //       options: {
-      //         sourceMap: true,
-      //         javascriptEnabled: true,
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        test: /\.(less)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              sourceMap: true,
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
     ]
   },
   plugins: [
