@@ -1,6 +1,6 @@
 {
   "name": "ak-webpack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "封装通用的webpack配置",
   "main": "src/index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/lusess123/ak-webpack#readme",
   "dependencies": {
+    "compression-webpack-plugin": "^3.1.0",
     "css-loader": "^2.1.1",
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",

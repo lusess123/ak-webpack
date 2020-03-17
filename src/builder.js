@@ -4,6 +4,7 @@ const path = require('path')
 const fs = require('fs')
 const TerserPlugin = require("terser-webpack-plugin");
 const tsImportPluginFactory = require('ts-import-plugin')
+const CompressionPlugin = require("compression-webpack-plugin");
 const webpack = require('webpack')
 console.log('__dirname：', __dirname)
 console.log('__filename：', __filename)
@@ -206,6 +207,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
     ]
   },
   plugins: [
+    new CompressionPlugin(),
     new HtmlWebpackPlugin({
       title,
       chunks: ['app'],
