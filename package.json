@@ -1,6 +1,6 @@
 {
   "name": "ak-webpack",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "封装通用的webpack配置",
   "main": "src/index.js",
   "scripts": {
