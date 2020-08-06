@@ -60,10 +60,10 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
       })] : [],
     },
     output: {
-      path: path.join(process.cwd(), '/public/demo'),
+      path: publicPath,
       filename: '[name].js',
       chunkFilename: '[name].[chunkhash].js',
-      publicPath: '/demo',
+      publicPath: '/',
     },
     devServer: {
       contentBase: path.join(processPath, 'public'),
