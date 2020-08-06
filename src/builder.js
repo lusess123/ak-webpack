@@ -60,10 +60,10 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
       })] : [],
     },
     output: {
-      path: publicPath,
+      path: path.join(process.cwd(), '/public/demo'),
       filename: '[name].js',
       chunkFilename: '[name].[chunkhash].js',
-      publicPath: '/',
+      publicPath: '/demo',
     },
     devServer: {
       contentBase: path.join(processPath, 'public'),
@@ -73,6 +73,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
       watchOptions: {
         ignored: []
       },
+  
       // https: {
       //   key: fs.readFileSync(path.join(__dirname,'./certificate/server.key')),
       //   cert: fs.readFileSync(path.join(__dirname,'./certificate/server.crt')),
@@ -160,6 +161,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
             path.resolve('./node_modules'),
           ],
           exclude: [
+            ...tsLoaderInclude,
             path.resolve(processPath, 'src'),
             path.resolve(processPath, 'test'),
           ],
@@ -184,6 +186,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
           include: [
             path.resolve(processPath, 'src'),
             path.resolve(processPath, 'test'),
+             ...tsLoaderInclude,
           ],
           exclude: [
             path.resolve(processPath, 'node_modules'),
