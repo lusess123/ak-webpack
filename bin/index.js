@@ -4,11 +4,19 @@ var iconv = require('iconv-lite');
 var encoding = 'cp936';
 var binaryEncoding = 'binary';
 
-process.exec('webpack-dev-server --config node_modules/ak-webpack/src/config.js --mode development',function (error, stdout, stderr) {
+const ddd = process.exec('webpack-dev-server --config node_modules/ak-webpack/src/config.js --mode development',function (error, stdout, stderr) {
   if (error !== null) {
     console.log('exec error: ' + error);
   }
   console.log(iconv.decode(new Buffer(stdout, binaryEncoding), encoding), iconv.decode(new Buffer(stderr, binaryEncoding), encoding));
 });
 
-console.log("hello word!")
+ddd.stdout.on('data', (d)=> {
+    console.log(d)
+})
+
+ddd.stderr.on('data', (d) => {
+  console.log(d)
+})
+
+console.log("==================开始启动编译=================")

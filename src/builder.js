@@ -19,10 +19,13 @@ const processPath = process.cwd()
 console.log('processPath:', processPath)
 
 const devMode = process.env.NODE_ENV !== 'production';
-console.log(process.env.NODE_ENV)
+console.log("process.env.NODE_ENV:  " + process.env.NODE_ENV)
 console.log('是否只允许GET请求', process.env.ONLY_ALLOW_GET)
-
 console.log('parallel:  ' + (process.env.parallel === 'yes' ? undefined : false))
+const hasProjectConfigPath = fs.existsSync(path.resolve(processPath,"tsconfig.json"))
+// const hasConfigPath = fs.existsSync(path.resolve(__dirname, '../',"tsconfig.json"))
+const configPath = hasProjectConfigPath ? undefined : path.resolve(__dirname, '../',"tsconfig.json")
+console.log('configPath:  '+ (configPath ? configPath : path.resolve(processPath,"tsconfig.json")))
 // console.log('默认启用https,如果要禁用请覆盖devServer/https:false')
 // console.log('该默认证书的域名是*.terminus.io')
 // console.log('默认证书的过期时间是 2029年11月12日 星期一 中国标准时间 下午2:26:52')
@@ -135,6 +138,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
             allowTsInNodeModules: true,
             transpileOnly: true,
             happyPackMode: true,
+            configFile: configPath,
             // warningsFilter: /export .* was not found in/,
             getCustomTransformers: () => ({
               before: [tsImportPluginFactory([
