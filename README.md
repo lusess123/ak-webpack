@@ -18,7 +18,7 @@ script 添加:
 
 script 添加:
 
-"watch": "time webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
+"watch": " webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
 
 
 
