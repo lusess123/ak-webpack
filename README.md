@@ -8,7 +8,7 @@
 
 npm i ak-webpack -D
 
-## 使用配置
+## 默认使用
 
 script 添加
 
@@ -16,9 +16,16 @@ script 添加
 
 ## 定制使用
 
-"watch": "time webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development",
+"watch": "time webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
 
-（webconfig.config.js 为配置文件）
+
+
+
+
+（其中，webconfig.config.js 为配置文件）
+
+
+
 ```
    const ConsoleWebpack = require("ak-webpack");
    module.exports = ConsoleWebpack({
