@@ -10,11 +10,13 @@ npm i ak-webpack -D
 
 ## 默认使用
 
-script 添加
+script 添加:
 
 "watch": "akwp"
 
 ## 定制使用
+
+script 添加:
 
 "watch": "time webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
 
