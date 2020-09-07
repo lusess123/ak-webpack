@@ -18,7 +18,7 @@ script 添加:
 
 script 添加:
 
-"watch": "time webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
+"watch": " webpack-dev-server  --watch-poll --config ./webconfig.config.js --mode development"
 
 
 
@@ -70,6 +70,7 @@ v1.0.12
 
 
 修复了akwp的日志输出功能
+
 修复内置tsconfig.json忘记添加的bug
 
 v1.0.11
