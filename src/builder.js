@@ -138,7 +138,7 @@ module.exports = ({ title, tsImportPluginFactoryOptions = [], alias, tsLoaderInc
             allowTsInNodeModules: true,
             transpileOnly: true,
             happyPackMode: true,
-            configFile: configPath,
+            ...(configPath ? { configFile: configPath } : {} ),
             // warningsFilter: /export .* was not found in/,
             getCustomTransformers: () => ({
               before: [tsImportPluginFactory([
