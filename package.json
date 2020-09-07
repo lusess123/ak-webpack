@@ -1,6 +1,6 @@
 {
   "name": "ak-webpack",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "一个极简的开箱即用的webpack封装",
   "main": "src/index.js",
   "scripts": {
